@@ -1,0 +1,56 @@
+h1 {
+    font-size: 6vw;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: right;
+
+    @include respond(tab-port) {
+        text-align: left;
+        font-size: 10vw;
+    }
+}
+h2 {
+    font-size: 6vw;
+    line-height: 1.2;
+    @include respond(tab-port) {
+        text-align: left;
+        font-size: 10vw;
+    }
+}
+h3 {
+    font-size: 2.4vw;
+    line-height: 1.2;
+
+    @include respond(tab-port) {
+        font-size: 2.4rem;
+    }
+}
+h4 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 1.25;
+
+    @include respond(tab-port) {
+        font-size: 2rem;
+    }
+}
+p,
+.career-list {
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 1.5;
+    letter-spacing: .05rem;
+
+    @include respond(tab-port) {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+#section4 h1 {
+    hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
