@@ -95,7 +95,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   border: none;
   cursor: pointer;
 }
@@ -165,7 +165,7 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #FF2768;
   display: inline-block;
   text-decoration: none;
@@ -210,7 +210,7 @@ body {
 }
 
 .nav {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -682,7 +682,7 @@ h4 {
 
 p,
 .career-list {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: 0.05rem;
