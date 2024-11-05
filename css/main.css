@@ -95,7 +95,7 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border: none;
   cursor: pointer;
 }
@@ -165,7 +165,7 @@ body {
 }
 
 .btn-text:link, .btn-text:visited {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #FF2768;
   display: inline-block;
   text-decoration: none;
