@@ -101,12 +101,12 @@ body {
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.2);
+  box-shadow: 0 1rem 2rem rgba(28, 28, 28, 0.2);
 }
 .btn:active, .btn:focus {
   outline: none;
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(28, 28, 28, 0.2);
 }
 .btn--white {
   background-color: #ffffff;
@@ -133,19 +133,19 @@ body {
   background-color: #05E0E9;
   color: #ffffff;
   font-size: 1.4rem;
-  color: #111111;
+  color: #1c1c1c;
   font-weight: 600;
 }
 .btn--cookie-accept::after {
   background-color: #05E0E9;
 }
 .btn--cookie-decline {
-  background-color: #111111;
+  background-color: #1c1c1c;
   color: #ffffff;
   font-size: 1.4rem;
 }
 .btn--cookie-decline::after {
-  background-color: #111111;
+  background-color: #1c1c1c;
 }
 .btn::after {
   content: "";
@@ -176,11 +176,11 @@ body {
 .btn-text:hover {
   background-color: #FF2768;
   color: #ffffff;
-  box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.15);
+  box-shadow: 0 1rem 2rem rgba(28, 28, 28, 0.15);
   transform: translateY(-2px);
 }
 .btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(28, 28, 28, 0.15);
   transform: translateY(0);
 }
 
@@ -401,7 +401,7 @@ body {
 }
 
 #section1, #section4, #section5, #section7, #section9 {
-  background-color: #111111;
+  background-color: #1c1c1c;
 }
 
 .bg-video {
@@ -467,7 +467,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(17, 17, 17, 0.8);
+  background-color: rgba(28, 28, 28, 0.8);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -477,7 +477,7 @@ body {
   .popup {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(17, 17, 17, 0.3);
+    background-color: rgba(28, 28, 28, 0.3);
   }
 }
 .popup__content {
@@ -487,7 +487,7 @@ body {
   transform: translate(-50%, -50%);
   width: 75%;
   background-color: #333333;
-  box-shadow: 0 2rem 4rem rgba(17, 17, 17, 0.2);
+  box-shadow: 0 2rem 4rem rgba(28, 28, 28, 0.2);
   border-radius: 3px;
   display: flex;
   overflow: scroll;
