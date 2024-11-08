@@ -160,27 +160,27 @@ ScrollTrigger.create({
 
 
 // 가로
-const horizontal = document.querySelector("#horizontal");
-const sections = gsap.utils.toArray("#horizontal > section");
+// const horizontal = document.querySelector("#horizontal");
+// const sections = gsap.utils.toArray("#horizontal > section");
 
-let scrollTween = gsap.to(sections, {
-    xPercent: -100 * (sections.length - 1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: horizontal,
-        start: "top top",
-        end: () =>  "+=" + (horizontal.offsetWidth - innerWidth),
-        pin: true,
-        anticipatePin: 1,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        snap: {
-            snapTo: 1 / (sections.length - 1),
-            inertia: false,
-            duration: { min: 0.1, max: 0.1 }
-        },
-    }
-});
+// let scrollTween = gsap.to(sections, {
+//     xPercent: -100 * (sections.length - 1),
+//     ease: "none",
+//     scrollTrigger: {
+//         trigger: horizontal,
+//         start: "top top",
+//         end: () =>  "+=" + (horizontal.offsetWidth - innerWidth),
+//         pin: true,
+//         anticipatePin: 1,
+//         scrub: 1,
+//         invalidateOnRefresh: true,
+//         snap: {
+//             snapTo: 1 / (sections.length - 1),
+//             inertia: false,
+//             duration: { min: 0.1, max: 0.1 }
+//         },
+//     }
+// });
 
 // // 메뉴 숨기기
 // const showNav = gsap.from("#header", { 
