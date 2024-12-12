@@ -93,6 +93,11 @@ h1 {
   line-height: normal;
   letter-spacing: 2px;
 }
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
 
 h2 {
   font-size: 8rem;
@@ -240,8 +245,9 @@ p {
 }
 
 #header {
-  height: 10rem;
+  height: 8rem;
   width: 100%;
+  background-color: #131E28;
   position: fixed;
   top: 0;
   left: 0;
@@ -257,11 +263,6 @@ p {
 
 .header__logo {
   width: auto;
-}
-@media only screen and (max-width: 900px) {
-  .header__logo {
-    width: 50%;
-  }
 }
 
 .cookie-banner {
@@ -351,7 +352,7 @@ p {
 
 .section {
   display: flex;
-  padding: 8rem 10rem;
+  padding: 10rem 10rem;
   flex-direction: column;
   justify-content: center;
   width: 100vw;
@@ -361,17 +362,17 @@ p {
 }
 @media only screen and (min-width: 1800px) {
   .section {
-    padding: 8rem 20rem;
+    padding: 10rem 20rem;
   }
 }
 @media only screen and (max-width: 1200px) {
   .section {
-    padding: 6rem 6rem;
+    padding: 10rem 6rem;
   }
 }
 @media only screen and (max-width: 900px) {
   .section {
-    padding: 3rem 3rem;
+    padding: 10rem 3rem;
   }
 }
 .section__container {
@@ -442,6 +443,8 @@ p {
 }
 .section__h1 {
   text-align: center;
+  margin: 0 auto;
+  max-width: 80rem;
 }
 @media only screen and (max-width: 900px) {
   .section__h1 {

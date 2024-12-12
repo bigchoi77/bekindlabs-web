@@ -1,6 +1,7 @@
 #header {
-    height: 10rem;
+    height: 8rem;
     width: 100%;
+    background-color: $color-black;
 
     position: fixed;
       top: 0;
@@ -20,12 +21,13 @@
 }
 
 .header {
+    
     &__logo {
         width: auto;  
 
-        @include respond(tab-port) {
-            width: 50%;
-        }
+        // @include respond(tab-port) {
+        //     width: 50%;
+        // }
     }
 
 }

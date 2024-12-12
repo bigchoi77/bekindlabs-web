@@ -120,12 +120,33 @@ ScrollTrigger.create({
 
 
 
+// 스크롤 하자마자 헤더 나타내기
+
+gsap.fromTo("#header", 
+    { 
+        y: -100, // 헤더가 화면 위에서 시작
+        opacity: 0, 
+        visibility: "hidden" 
+    }, 
+    { 
+        y: 0, // 원래 위치로 슬라이드 다운
+        opacity: 1, 
+        visibility: "visible",
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: "body", // 트리거를 전체 페이지로 설정
+            start: "top top", // 페이지 스크롤 시작 시 동작
+            toggleActions: "play none none reverse", // 스크롤 내릴 때 play, 올릴 때 reverse
+        }
+    }
+);
+
 // 두번째 섹션부터 헤더 나타내기
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 
 // gsap.to("#header", {
 //     scrollTrigger: {
-//         trigger: "#section1",
+//         trigger: "#section2",
 //         start: "top center", // when the top of the second section hits the center of the viewport
 //         toggleActions: "play none none reverse", // plays when entering, reverses when leaving
 //     },
@@ -137,38 +158,38 @@ ScrollTrigger.create({
 
 
 // 스크롤힌트 나타내고 숨기기
-////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
 
-// let scrollHint = document.getElementById("scroll-hint");
-// let timeoutId;
+let scrollHint = document.getElementById("scroll-hint");
+let timeoutId;
 
-// // Hide scroll hint on scroll
-// window.addEventListener("scroll", () => {
-//     // Clear any existing timeout
-//     clearTimeout(timeoutId);
+// Hide scroll hint on scroll
+window.addEventListener("scroll", () => {
+    // Clear any existing timeout
+    clearTimeout(timeoutId);
 
-//     // Hide the scroll hint
-//     gsap.to(scrollHint, {
-//         opacity: 0,
-//         duration: 0.5,
-//         ease: "power1.out",
-//         onComplete: () => {
-//             scrollHint.style.visibility = "hidden";
-//         }
-//     });
+    // Hide the scroll hint
+    gsap.to(scrollHint, {
+        opacity: 0,
+        duration: 0.5,
+        ease: "power1.out",
+        onComplete: () => {
+            scrollHint.style.visibility = "hidden";
+        }
+    });
 
-//     // Set a timeout to show the scroll hint again if scrolling stops
-//     timeoutId = setTimeout(() => {
-//         gsap.to(scrollHint, {
-//             opacity: 0.5,
-//             duration: 0.5,
-//             ease: "power1.in",
-//             onStart: () => {
-//             scrollHint.style.visibility = "visible";
-//             }
-//         });
-//     }, 500); // 1 second after scrolling stops (500이하에선 작동안함)
-//   });
+    // Set a timeout to show the scroll hint again if scrolling stops
+    timeoutId = setTimeout(() => {
+        gsap.to(scrollHint, {
+            opacity: 0.5,
+            duration: 0.5,
+            ease: "power1.in",
+            onStart: () => {
+            scrollHint.style.visibility = "visible";
+            }
+        });
+    }, 500); // 1 second after scrolling stops (500이하에선 작동안함)
+  });
 
 // SECTION0 이미지 확대하기
 
@@ -187,14 +208,6 @@ ScrollTrigger.create({
 //     anticipatePin: 1,
 //     markers: false
 // });
-
-
-
-
-
-
-
-
 
 
 // // 가로
@@ -236,41 +249,41 @@ ScrollTrigger.create({
 // });
 
 // 메뉴 이동 설정
-// let links = gsap.utils.toArray("#parallax__nav ul li a");
+let links = gsap.utils.toArray("#parallax__nav ul li a");
 
-// links.forEach(link => {
-//     let element = document.querySelector(link.getAttribute("href"));
+links.forEach(link => {
+    let element = document.querySelector(link.getAttribute("href"));
 
-//     // ScrollTrigger 생성: 섹션이 뷰포트에 들어올 때 활성화 설정
-//     ScrollTrigger.create({
-//         trigger: element,
-//         start: "top center",
-//         end: "bottom center",
-//         onToggle: self => {
-//             if (self.isActive) {
-//                 setActive(link);
-//             }
-//         }
-//     });
+    // ScrollTrigger 생성: 섹션이 뷰포트에 들어올 때 활성화 설정
+    ScrollTrigger.create({
+        trigger: element,
+        start: "top center",
+        end: "bottom center",
+        onToggle: self => {
+            if (self.isActive) {
+                setActive(link);
+            }
+        }
+    });
 
-//     // 링크 클릭 이벤트 설정
-//     link.addEventListener("click", e => {
-//         e.preventDefault();
-//         // 섹션의 시작 부분으로 부드럽게 스크롤 이동
-//         gsap.to(window, {
-//             duration: 1,
-//             scrollTo: {
-//                 y: element,
-//                 offsetY: 0 // 섹션의 시작 부분이 화면 상단에 위치하도록 설정
-//             },
-//             onComplete: () => {
-//                 // 스크롤이 완료된 후 강제로 ScrollTrigger를 업데이트하여 애니메이션을 트리거
-//                 ScrollTrigger.refresh();
-//             },
-//             overwrite: "auto"
-//         });
-//     });
-// });
+    // 링크 클릭 이벤트 설정
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        // 섹션의 시작 부분으로 부드럽게 스크롤 이동
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: element,
+                offsetY: 0 // 섹션의 시작 부분이 화면 상단에 위치하도록 설정
+            },
+            onComplete: () => {
+                // 스크롤이 완료된 후 강제로 ScrollTrigger를 업데이트하여 애니메이션을 트리거
+                ScrollTrigger.refresh();
+            },
+            overwrite: "auto"
+        });
+    });
+});
 
 // // 링크 활성화 설정 함수
 // function setActive(link) {
