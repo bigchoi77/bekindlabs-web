@@ -119,9 +119,7 @@ ScrollTrigger.create({
 // });
 
 
-
-// 스크롤 하자마자 헤더 나타내기
-
+// 헤더가 슬라이드 다운/업되며 나타나고 사라지는 애니메이션
 gsap.fromTo("#header", 
     { 
         y: -100, // 헤더가 화면 위에서 시작
@@ -140,6 +138,31 @@ gsap.fromTo("#header",
         }
     }
 );
+
+
+
+
+
+// 스크롤 하자마자 헤더 나타내기
+
+// gsap.fromTo("#header", 
+//     { 
+//         y: -100, // 헤더가 화면 위에서 시작
+//         opacity: 0, 
+//         visibility: "hidden" 
+//     }, 
+//     { 
+//         y: 0, // 원래 위치로 슬라이드 다운
+//         opacity: 1, 
+//         visibility: "visible",
+//         duration: 0.5,
+//         scrollTrigger: {
+//             trigger: "body", // 트리거를 전체 페이지로 설정
+//             start: "top top", // 페이지 스크롤 시작 시 동작
+//             toggleActions: "play none none reverse", // 스크롤 내릴 때 play, 올릴 때 reverse
+//         }
+//     }
+// );
 
 // 두번째 섹션부터 헤더 나타내기
 //////////////////////////////////////////////////////
