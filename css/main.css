@@ -393,6 +393,7 @@ p {
 .section--home {
   background-color: #131E28;
   gap: 6rem;
+  align-items: center;
 }
 .section--vision {
   height: auto;
