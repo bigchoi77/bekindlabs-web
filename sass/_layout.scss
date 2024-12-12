@@ -204,7 +204,8 @@
 
     &__text {
         color: $color-sand-light; /* 이 변수는 프로젝트 전체에서 재사용된다면 그대로 유지 */
-        justify-content: center; /* 부모의 정렬 상태와 다를 경우 필요 */
+        justify-content: center;
+        text-align: center;/* 부모의 정렬 상태와 다를 경우 필요 */
     }
     
     &__logo {
