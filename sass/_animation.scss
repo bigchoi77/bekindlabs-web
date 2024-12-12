@@ -1,0 +1,88 @@
+.intro-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 각 이미지 컨테이너 */
+.img-container {
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform 기준점 중앙으로 잡기 위해 필요 */
+//   transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* 실제 이미지 스타일 */
+.img-container img {
+    height: 6rem;
+    width: auto; /* 이미지 최종 크기 */
+    
+}  
+
+
+/* K: 오른쪽 아래 -> 중앙 (회전 및 스케일 다운) */
+.k1 {
+    animation: kMove 2.5s ease forwards;
+  }
+  @keyframes kMove {
+    0% {
+      transform: translate(200vw, 200vh) rotate(45deg) scale(100); 
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-90%, -50%) rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+
+// .logo-K1 {
+//     width: 16rem;
+//     height: 16rem;
+//     position: absolute;
+//     top: 32rem;
+//     right: -7rem;
+//     transform: rotate(-40deg);
+// }
+
+// .logo-K2 {
+//     width: 17rem;
+//     height: 17rem;
+//     position: absolute;
+//     bottom: -1rem;
+//     right: -4rem;
+//     transform: rotate(0deg);
+//     overflow: hidden;
+// }
+
+// .logo-I {
+//     width: 16rem;
+//     height: 16rem;
+//     position: absolute;
+//     bottom: 20rem;
+//     left: -8rem;
+//     transform: rotate(40deg);
+//     overflow: hidden;
+// }
+
+// .logo-N {
+//     width: 36rem;
+//     height: 36rem;
+//     position: absolute;
+//     top: -23rem;
+//     left: -6rem;
+//     transform: rotate(180deg);
+//     overflow: hidden;
+// }
+
+// .logo-D {
+//     width: 10rem;
+//     height: 10rem;
+//     position: absolute;
+//     top:11rem;
+//     right: -4.5rem;
+//     transform: rotate(180deg);
+//     overflow: hidden;
+// }

@@ -1,0 +1,79 @@
+#header {
+    height: 10rem;
+    width: 100%;
+
+    position: fixed;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease-in-out;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 4rem;
+    
+    z-index: 1000;
+    
+   
+}
+
+.header {
+    &__logo {
+        width: auto;  
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    }
+
+}
+
+.cookie-banner {
+    width: 40rem;
+    position: fixed; 
+    left: 0;
+    bottom: 0; 
+
+    margin: 5rem;
+    border-radius: 1.2rem;
+    
+    background-color: rgba(#fff, 0.1); 
+    color: #fff; 
+    padding: 20px; 
+    text-align: center; 
+    z-index: 1000;
+    align-items: center;
+
+    @include respond(tab-port) {
+        position: fixed; 
+        bottom: 5%; 
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin: 2rem 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 2rem;
+
+    &__link {
+        color: $color-pink;
+    }
+
+    &__button-wrap {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}

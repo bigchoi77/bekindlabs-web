@@ -1,0 +1,257 @@
+
+.animation-item {
+    will-change: transform, opacity;
+}
+
+.color-heading {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+        margin-left: -3rem;
+    }
+    
+ 
+    &__text{
+        padding-left: 3rem;
+        padding-right: 1rem;
+        width: 100%;
+        // min-width: 18rem;
+        align-content: center;
+
+        @include respond(tab-port) {
+            width: 70%;
+            // min-width: 18rem;
+        }
+
+        &--turquoise {
+            background-color: $color-turquoise;
+            color: $color-grey-dark;
+            }
+
+        &--orange {
+            background-color: $color-orange;
+            color: $color-sand-light;
+        }
+
+        &--blue {
+            background-color: $color-blue;
+            color: $color-sand-light;            
+        }
+
+        &--yellow {
+            background-color: $color-yellow;
+            color: $color-grey-dark;            
+        }
+    }
+
+    &__image {
+        height: 6.8rem;
+        margin-left: -0.2rem;
+    }
+}
+
+.section {
+    display: flex;
+    padding: 8rem 10rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    gap: 3rem;
+    overflow: hidden;
+
+    @include respond(big-desktop) {
+        padding: 8rem 20rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 6rem 6rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 3rem 3rem;
+    }
+
+    &__container {
+        display: flex;
+        
+        gap: 6rem;
+
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        flex: 1;
+    }
+   
+    &--home {
+        background-color: $color-black;
+        gap: 6rem;
+    }
+
+    &--vision {
+        height: auto;
+        background-color: $color-grey-dark;
+
+        @include respond(tab-port) {
+            height: auto;
+        }
+    }
+
+    &--offer {
+        height: 100vh;
+        background-color: $color-black;
+
+        @include respond(tab-port) {
+            height: auto;
+        }
+    }
+
+    &--methodology {
+        height: 100vh;
+        background-color: $color-grey-dark;
+
+        @include respond(tab-port) {
+            height: auto;
+        }
+    }
+
+    &--careers {
+        height: auto;
+        background-color: $color-black;
+    }
+
+    &--contact {
+        height: 100vh;
+        background-color: $color-grey-dark;
+    }
+
+    &__header {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: $color-orange;
+        margin-bottom: 6rem;
+    }
+
+    &__title-icon {
+        height: 2rem;
+    }
+
+    &__h1 {
+        // margin-bottom: 2rem;
+        text-align: center;
+
+        @include respond(tab-port) {
+            text-align: left;
+        }
+    }
+
+    &__h2 {
+        margin-bottom: 2rem;
+        // text-align: center;
+    }
+
+    &__h3 {
+        color: $color-turquoise;
+        width: 60%;
+
+    
+        // margin: 3rem 0;
+        
+        &--white {
+            color: $color-sand-light;
+            margin: 0 auto;
+            margin-bottom: 8rem;
+            width: 60%;
+            align-items: center;
+
+            @include respond(tab-port) {
+                text-align: left;
+                width: 100%;
+            }
+        }
+    }
+
+    &__h4 {
+        color: $color-sand-light;
+        // margin: 3rem 0 0 0;
+    }
+
+    &__p {
+        color: $color-sand-light;
+        // margin: -1rem 0 0 0;
+    }
+
+    // &__logo {
+    //     width: 55vw;
+    //     height: auto;
+    //     padding: 0;
+    //     margin-left: auto;
+        
+    //     &--textPath {
+    //        display: block;
+    //     }
+    // }
+    
+    &__maintext {
+        color: $color-sand-light;
+        padding: 0;
+    }
+}
+
+
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    opacity: .15;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, rgba(0,0,0, 1), rgba(0,0,0, 0.2));
+        z-index: 0;
+        pointer-events: none; /* 비디오 상호작용 방지 */   
+    }
+    
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.career-list li:not(:last-child) {
+    margin-bottom: 1.2rem; /* 마지막 아이템 제외, 나머지 아이템들 사이에 1.2rem 간격 */
+    // @include respond(tab-port) {
+    //     margin-bottom: .6rem;
+    // } 
+}
+
+.career-list {
+    // margin-top: 3rem;
+    &__li {
+        margin-left: 2rem;
+        line-height: 2rem;
+    }
+}
+
+

@@ -1,0 +1,139 @@
+.btn {
+
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    min-width: 30rem;
+    align-self: center;
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        
+        
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+        // &::after {
+        //     transform: scaleX(1.4) scaleY(1.6);
+        //     opacity: 0;
+        // }
+    }
+    
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+    
+    &--white {
+        background-color: $color-sand-light;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-sand-light;
+        }
+    }
+
+    &--pink {
+        background-color: $color-pink;
+        color: $color-sand-light;
+
+        &::after {
+            background-color: $color-pink;
+        }
+    }
+
+    &--light-blue {
+        background-color: $color-blue;
+        color: $color-sand-light;
+
+        &::after {
+            background-color: $color-blue;
+        }
+    }
+
+    &--cookie-accept {
+        background-color: $color-blue;
+        color: $color-sand-light;
+
+        font-size: 1.4rem;
+        color: $color-black;
+        font-weight: 600;
+
+        &::after {
+            background-color: $color-blue;
+        }
+    }
+    
+    &--cookie-decline {
+        background-color: $color-black;
+        color: $color-sand-light;
+
+        font-size: 1.4rem;
+       
+
+        &::after {
+            background-color: $color-black;
+        }
+    }
+
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-orange;
+        display: inline-block;
+        text-decoration: none;
+        // border-bottom: 1px solid $color-orange;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-orange;
+        color: $color-sand-light;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}

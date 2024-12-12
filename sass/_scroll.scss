@@ -1,0 +1,48 @@
+.scroll-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .5;
+    z-index: 1;
+}
+
+.scroll-message {
+    font-size: 1.2em;
+    color: $color-sand-light;
+    margin-bottom: 10px;
+}
+
+.scroll-icon {
+    width: 30px;
+    height: 50px;
+    border: 2px solid $color-sand-light;
+    border-radius: 25px;
+    position: relative;
+}
+
+.scroll-ball {
+    width: 8px;
+    height: 8px;
+    background-color: $color-sand-light;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollBallAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes scrollBallAnimation {
+    0% {
+      top: 8px;
+    }
+    100% {
+      top: 30px;
+    }
+}

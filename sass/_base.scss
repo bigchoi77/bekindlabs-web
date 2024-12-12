@@ -1,0 +1,78 @@
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* 부드러운 스크롤 */
+}
+
+html {
+    box-sizing: border-box;
+
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    // @include respond(tab-land) { // width < 1200?
+    //     font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    // }
+
+    // @include respond(tab-port) { // width < 900?
+    //     font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    // }
+    
+    // @include respond(big-desktop) {
+    //     font-size: 75%; //1rem = 12, 12/16
+    // }
+}
+  
+body {
+    font-family: "Nunito", sans-serif;
+    line-height: 1.6;
+    color: $color-sand-light;
+    background-color: $color-black;
+    
+}
+  
+.orange {
+    color: $color-orange;
+}
+.turquoise {
+    color: $color-turquoise;
+}
+
+.blue {
+    color: $color-blue;
+}
+
+.yellow {
+    color: $color-yellow;
+}
+
+.bold {
+    font-weight: 500;
+}
+  
+.bkl-light-blue {
+    color: $color-lime;
+}
+.bkl-deep-blue {
+    color: $color-blue;
+}
+
+.split > span {
+    display: inline-block;
+} 
