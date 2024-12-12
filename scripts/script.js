@@ -216,10 +216,10 @@ window.addEventListener("scroll", () => {
 
 // SECTION0 이미지 확대하기
 
-// 06 : 텍스트 확대하기
+// // 텍스트 확대하기
 // const ani0 = gsap.timeline();
-// ani0.to("#section0 .section-item__logo", {scale: 100, duration: 1, autoAlpha: 1})
-//     .to("#section0 .section-item__logo", {autoAlpha: 0})
+// ani0.to("#section1 .home-container__text", {scale: 100, duration: 1, autoAlpha: 1})
+//     .to("#section1 .home-container__text", {autoAlpha: 0})
 
 // ScrollTrigger.create({
 //     animation: ani0,
@@ -232,29 +232,6 @@ window.addEventListener("scroll", () => {
 //     markers: false
 // });
 
-
-// // 가로
-// const horizontal = document.querySelector("#horizontal");
-// const sections = gsap.utils.toArray("#horizontal > section");
-
-// let scrollTween = gsap.to(sections, {
-//     xPercent: -100 * (sections.length - 1),
-//     ease: "none",
-//     scrollTrigger: {
-//         trigger: horizontal,
-//         start: "top top",
-//         end: () =>  "+=" + (horizontal.offsetWidth - innerWidth),
-//         pin: true,
-//         anticipatePin: 1,
-//         scrub: 1,
-//         invalidateOnRefresh: true,
-//         snap: {
-//             snapTo: 1 / (sections.length - 1),
-//             inertia: false,
-//             duration: { min: 0.1, max: 0.1 }
-//         },
-//     }
-// });
 
 // // 메뉴 숨기기
 // const showNav = gsap.from("#header", { 
@@ -271,48 +248,29 @@ window.addEventListener("scroll", () => {
 //     }
 // });
 
-// 메뉴 이동 설정
-let links = gsap.utils.toArray("#parallax__nav ul li a");
+// ScrollToPlugin 등록
+gsap.registerPlugin(ScrollToPlugin);
 
-links.forEach(link => {
-    let element = document.querySelector(link.getAttribute("href"));
+// 메뉴 클릭 이벤트 추가
+document.querySelectorAll('.navigation__link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // 기본 앵커 동작 차단
 
-    // ScrollTrigger 생성: 섹션이 뷰포트에 들어올 때 활성화 설정
-    ScrollTrigger.create({
-        trigger: element,
-        start: "top center",
-        end: "bottom center",
-        onToggle: self => {
-            if (self.isActive) {
-                setActive(link);
-            }
-        }
-    });
+        // 이동할 섹션 ID 가져오기
+        const targetId = e.target.getAttribute('href');
 
-    // 링크 클릭 이벤트 설정
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        // 섹션의 시작 부분으로 부드럽게 스크롤 이동
+        // 부드러운 스크롤 이동
         gsap.to(window, {
-            duration: 1,
-            scrollTo: {
-                y: element,
-                offsetY: 0 // 섹션의 시작 부분이 화면 상단에 위치하도록 설정
-            },
-            onComplete: () => {
-                // 스크롤이 완료된 후 강제로 ScrollTrigger를 업데이트하여 애니메이션을 트리거
-                ScrollTrigger.refresh();
-            },
-            overwrite: "auto"
+            scrollTo: targetId,
+            duration: 1, // 스크롤 이동 시간
+            ease: "power2.inOut" // 부드러운 애니메이션 효과
         });
+        
+
+        // 네비게이션 닫기
+        document.querySelector('.navigation__checkbox').checked = false;
     });
 });
-
-// // 링크 활성화 설정 함수
-// function setActive(link) {
-//     links.forEach(el => el.classList.remove("active"));
-//     link.classList.add("active");
-// }
 
 
 //스무스 효과
