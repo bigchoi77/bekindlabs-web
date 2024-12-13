@@ -134,13 +134,6 @@ p {
   letter-spacing: 1px;
 }
 
-#section4 h1 {
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  word-break: break-word;
-  overflow-wrap: break-word;
-}
-
 .btn {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
@@ -278,6 +271,19 @@ p {
 
 .header__logo {
   width: auto;
+}
+
+.footer {
+  display: flex;
+  height: 6rem;
+  background-color: #131E28;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center;
+  gap: 2rem;
+}
+.footer__text {
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .cookie-banner {
@@ -857,7 +863,7 @@ p {
   transform: translateX(1rem);
 }
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(100);
+  transform: scale(120);
 }
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
