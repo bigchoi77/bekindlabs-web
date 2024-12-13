@@ -469,20 +469,8 @@
 
     <script>
     
-    // Check if the user has already accepted cookies
-if (!localStorage.getItem("cookiesAccepted")) {
-    // Show the cookie popup
-    document.getElementById("cookie-popup").classList.remove("hidden");
-}
 
-// Accept button click handler
-document.getElementById("accept-cookies").addEventListener("click", () => {
-    // Save acceptance to local storage
-    localStorage.setItem("cookiesAccepted", "true");
 
-    // Hide the cookie popup
-    document.getElementById("cookie-popup").classList.add("hidden");
-});
 
     
     </script>
