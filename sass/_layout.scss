@@ -11,17 +11,18 @@
         margin-left: -3rem;
     }
     
- 
     &__text{
         padding-left: 3rem;
         padding-right: 1rem;
         width: 100%;
         // min-width: 18rem;
         align-content: center;
-        margin-left: -3rem;
+        // margin-left: -3rem;
 
         @include respond(tab-port) {
             width: 70%;
+            
+            
             // min-width: 18rem;
         }
 
@@ -29,24 +30,38 @@
             border-radius: 5rem 0 0 5rem;
             background-color: $color-turquoise;
             color: $color-grey-dark;
+
+            @include respond(tab-port) {
+                border-radius: 0;  
             }
+
+        }
 
         &--orange {
             border-radius: 5rem 0 0 5rem;
             background-color: $color-orange;
             color: $color-sand-light;
+            @include respond(tab-port) {
+                border-radius: 0;  
+            }
         }
 
         &--blue {
             border-radius: 5rem 0 0 5rem;
             background-color: $color-blue;
-            color: $color-sand-light;            
+            color: $color-sand-light;  
+            @include respond(tab-port) {
+                border-radius: 0;  
+            }          
         }
 
         &--yellow {
             border-radius: 5rem 0 0 5rem;
             background-color: $color-yellow;
-            color: $color-grey-dark;            
+            color: $color-grey-dark; 
+            @include respond(tab-port) {
+                border-radius: 0;  
+            }           
         }
     }
 
@@ -138,6 +153,10 @@
     &--contact {
         height: 100vh;
         background-color: $color-grey-dark;
+        
+        @include respond(tab-port) {
+            height: auto;
+        }
     }
 
     &__header {
@@ -224,6 +243,18 @@
     &__logo img {
         width: 100%;
         height: auto;
+    }
+
+}
+
+.text-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 3rem;
+
+    @include respond(tab-port) {
+        margin-left: 0;
     }
 
 }
