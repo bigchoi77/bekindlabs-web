@@ -459,7 +459,36 @@
     </main>
     
 
-   
+    <div id="cookie-popup" class="cookie-popup">
+        <p>
+            This website uses cookies to enhance the user experience. By using our website, you agree to our 
+            <a href="/privacy-policy" target="_blank">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies" class="cookie-popup__button">Accept</button>
+    </div>
+
+    <script>
+    
+    // Check if the user has already accepted cookies
+if (!localStorage.getItem("cookiesAccepted")) {
+    // Show the cookie popup
+    document.getElementById("cookie-popup").classList.remove("hidden");
+}
+
+// Accept button click handler
+document.getElementById("accept-cookies").addEventListener("click", () => {
+    // Save acceptance to local storage
+    localStorage.setItem("cookiesAccepted", "true");
+
+    // Hide the cookie popup
+    document.getElementById("cookie-popup").classList.add("hidden");
+});
+
+    
+    </script>
+
+
+
     
     <!-- <div id="cookieConsent" class="cookie-banner">
         <p class="cookie-banner__text">
@@ -470,9 +499,7 @@
             <button id="acceptCookies" class="btn btn--cookie-accept">Accept</button>
             <button id="declineCookies" class="btn btn--cookie-decline">Decline</button>
         </div>    
-    </div> -->
-
-    
+    </div>
 
     
     
@@ -492,9 +519,9 @@
                 document.getElementById("cookieConsent").style.display = "none";
             };
         });
-    </script>
+    </script> -->
 
-    <!-- 모바일에서 버튼 링크 바꾸기 -->
+    <!-- 모바일에서 버튼 링크 바꾸기
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -506,7 +533,7 @@
                 applyButton.href = "https://forms.gle/WThWzk68cjprsF3U6";
             }
         });
-    </script>
+    </script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>

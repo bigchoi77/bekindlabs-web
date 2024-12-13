@@ -18,6 +18,7 @@
         width: 100%;
         // min-width: 18rem;
         align-content: center;
+        margin-left: -3rem;
 
         @include respond(tab-port) {
             width: 70%;
@@ -25,21 +26,25 @@
         }
 
         &--turquoise {
+            border-radius: 5rem 0 0 5rem;
             background-color: $color-turquoise;
             color: $color-grey-dark;
             }
 
         &--orange {
+            border-radius: 5rem 0 0 5rem;
             background-color: $color-orange;
             color: $color-sand-light;
         }
 
         &--blue {
+            border-radius: 5rem 0 0 5rem;
             background-color: $color-blue;
             color: $color-sand-light;            
         }
 
         &--yellow {
+            border-radius: 5rem 0 0 5rem;
             background-color: $color-yellow;
             color: $color-grey-dark;            
         }

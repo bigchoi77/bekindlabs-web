@@ -62,49 +62,97 @@
     
 }
 
-.cookie-banner {
-    width: 40rem;
-    position: fixed; 
-    left: 0;
-    bottom: 0; 
-
-    margin: 5rem;
-    border-radius: 1.2rem;
-    
-    background-color: rgba(#fff, 0.1); 
-    color: #fff; 
-    padding: 20px; 
-    text-align: center; 
-    z-index: 1000;
-    align-items: center;
-
-    @include respond(tab-port) {
-        position: fixed; 
-        bottom: 5%; 
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-    }
-
-    &__text {
-        font-size: 1.4rem;
-        margin: 2rem 0;
-    }
-
+/* 기본 팝업 스타일 */
+.cookie-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
     display: flex;
-    flex-direction: column;
-    
-    gap: 2rem;
-
-    &__link {
-        color: $color-pink;
-    }
-
-    &__button-wrap {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-    }
-    
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+/* 링크 스타일 */
+.cookie-popup a {
+    color: #00c4ff;
+    text-decoration: underline;
+}
+
+/* 버튼 스타일 */
+.cookie-popup__button {
+    background-color: #00c4ff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-popup__button:hover {
+    background-color: #008ecf;
+}
+
+/* 팝업 숨기기 */
+.cookie-popup.hidden {
+    display: none;
+}
+
+
+
+
+// .cookie-banner {
+//     width: 40rem;
+//     position: fixed; 
+//     left: 0;
+//     bottom: 0; 
+
+//     margin: 5rem;
+//     border-radius: 1.2rem;
+    
+//     background-color: rgba(#fff, 0.1); 
+//     color: #fff; 
+//     padding: 20px; 
+//     text-align: center; 
+//     z-index: 1000;
+//     align-items: center;
+
+//     @include respond(tab-port) {
+//         position: fixed; 
+//         bottom: 5%; 
+//         left: 50%;
+//         transform: translateX(-50%);
+//         margin: 0;
+//     }
+
+//     &__text {
+//         font-size: 1.4rem;
+//         margin: 2rem 0;
+//     }
+
+//     display: flex;
+//     flex-direction: column;
+    
+//     gap: 2rem;
+
+//     &__link {
+//         color: $color-pink;
+//     }
+
+//     &__button-wrap {
+//         display: flex;
+//         gap: 2rem;
+//         justify-content: center;
+//         align-items: center;
+//     }
+    
+// }

@@ -286,44 +286,49 @@ p {
   font-size: 1.3rem;
 }
 
-.cookie-banner {
-  width: 40rem;
+/* 기본 팝업 스타일 */
+.cookie-popup {
   position: fixed;
-  left: 0;
-  bottom: 0;
-  margin: 5rem;
-  border-radius: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1000;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-@media only screen and (max-width: 900px) {
-  .cookie-banner {
-    position: fixed;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-  }
+
+/* 링크 스타일 */
+.cookie-popup a {
+  color: #00c4ff;
+  text-decoration: underline;
 }
-.cookie-banner__text {
-  font-size: 1.4rem;
-  margin: 2rem 0;
+
+/* 버튼 스타일 */
+.cookie-popup__button {
+  background-color: #00c4ff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
-.cookie-banner__link {
-  color: #FF2768;
+
+.cookie-popup__button:hover {
+  background-color: #008ecf;
 }
-.cookie-banner__button-wrap {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
+
+/* 팝업 숨기기 */
+.cookie-popup.hidden {
+  display: none;
 }
 
 .animation-item {
@@ -344,6 +349,7 @@ p {
   padding-right: 1rem;
   width: 100%;
   align-content: center;
+  margin-left: -3rem;
 }
 @media only screen and (max-width: 900px) {
   .color-heading__text {
@@ -351,18 +357,22 @@ p {
   }
 }
 .color-heading__text--turquoise {
+  border-radius: 5rem 0 0 5rem;
   background-color: #22F5CB;
   color: #344859;
 }
 .color-heading__text--orange {
+  border-radius: 5rem 0 0 5rem;
   background-color: #FF8577;
   color: #F0EDE5;
 }
 .color-heading__text--blue {
+  border-radius: 5rem 0 0 5rem;
   background-color: #10A9FF;
   color: #F0EDE5;
 }
 .color-heading__text--yellow {
+  border-radius: 5rem 0 0 5rem;
   background-color: #FFE588;
   color: #344859;
 }
