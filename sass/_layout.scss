@@ -119,9 +119,12 @@
     }
    
     &--home {
+        height:100vh;
         background-color: $color-black;
         gap: 6rem;
         align-items: center;
+
+        
     }
 
     &--vision {
@@ -239,16 +242,24 @@
         color: $color-sand-light; /* 이 변수는 프로젝트 전체에서 재사용된다면 그대로 유지 */
         justify-content: center;
         text-align: center !important;/* 부모의 정렬 상태와 다를 경우 필요 */
+        @include respond(tab-port) {
+            margin-top: -10rem;
+        }
     }
     
     &__logo {
         display: flex;
         justify-content: center; /* 부모의 정렬 상태와 다를 경우 필요 */
+        
+        
     }
 
     &__logo img {
         width: 100%;
         height: auto;
+        @include respond(tab-port) {
+            width: 80%;
+        }
     }
 
 }
@@ -314,7 +325,7 @@
     display: flex;
     flex-direction: column;
     
-    padding: 4rem 10rem;
+    padding: 10rem 10rem;
     width: 80vw;
     height: auto;
     gap: 3rem;

@@ -248,8 +248,20 @@ window.addEventListener("scroll", () => {
 //     }
 // });
 
-// ScrollToPlugin 등록
-gsap.registerPlugin(ScrollToPlugin);
+// 로고 앵커 요소 선택
+const logoLink = document.querySelector('.js-scroll-top');
+
+// 클릭 이벤트 등록
+logoLink.addEventListener('click', (event) => {
+  event.preventDefault(); // # 링크의 기본 동작 막기
+  
+  // GSAP ScrollToPlugin을 사용한 부드러운 스크롤
+  gsap.to(window, {
+    duration: 1,              // 애니메이션 지속 시간(초)
+    scrollTo: { y: 0 },       // 이동할 위치(맨 위)
+    ease: "power2.inOut"      // 가속 곡선(easing)
+  });
+});
 
 // 메뉴 클릭 이벤트 추가
 document.querySelectorAll('.navigation__link').forEach(link => {

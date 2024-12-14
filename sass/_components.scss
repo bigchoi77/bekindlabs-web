@@ -72,19 +72,27 @@
 
 .footer {
     display: flex;
-    height: 6rem;
+    min-height: 6rem;
     background-color: $color-black;
-   
-
-    justify-content: center; /* 가로 중앙 정렬 */
+    padding: 0 20rem ;
+    justify-content: space-between; /* 가로 중앙 정렬 */
     align-items: center; 
 
     gap: 2rem;
    
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding: 4rem;
+    }
 
     &__text {
         text-align: center;
         font-size: 1.3rem;
+    }
+
+    &__policy {
+        display: flex;
+        gap: 2rem;
     }
     
 }

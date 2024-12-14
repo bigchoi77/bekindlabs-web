@@ -310,15 +310,26 @@ p {
 
 .footer {
   display: flex;
-  height: 6rem;
+  min-height: 6rem;
   background-color: #131E28;
-  justify-content: center; /* 가로 중앙 정렬 */
+  padding: 0 20rem;
+  justify-content: space-between; /* 가로 중앙 정렬 */
   align-items: center;
   gap: 2rem;
+}
+@media only screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    padding: 4rem;
+  }
 }
 .footer__text {
   text-align: center;
   font-size: 1.3rem;
+}
+.footer__policy {
+  display: flex;
+  gap: 2rem;
 }
 
 .cookie-banner {
@@ -545,6 +556,7 @@ p {
   gap: 6rem;
 }
 .section--home {
+  height: 100vh;
   background-color: #131E28;
   gap: 6rem;
   align-items: center;
@@ -648,6 +660,11 @@ p {
   justify-content: center;
   text-align: center !important; /* 부모의 정렬 상태와 다를 경우 필요 */
 }
+@media only screen and (max-width: 900px) {
+  .home-container__text {
+    margin-top: -10rem;
+  }
+}
 .home-container__logo {
   display: flex;
   justify-content: center; /* 부모의 정렬 상태와 다를 경우 필요 */
@@ -655,6 +672,11 @@ p {
 .home-container__logo img {
   width: 100%;
   height: auto;
+}
+@media only screen and (max-width: 900px) {
+  .home-container__logo img {
+    width: 80%;
+  }
 }
 
 .text-wrap {
@@ -709,7 +731,7 @@ p {
 .subpages {
   display: flex;
   flex-direction: column;
-  padding: 4rem 10rem;
+  padding: 10rem 10rem;
   width: 80vw;
   height: auto;
   gap: 3rem;
