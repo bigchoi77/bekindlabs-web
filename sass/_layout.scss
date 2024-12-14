@@ -111,6 +111,12 @@
         
         flex: 1;
     }
+
+    &--policy {
+        background-color: $color-black;
+        gap: 6rem;
+        
+    }
    
     &--home {
         background-color: $color-black;
@@ -304,4 +310,94 @@
     }
 }
 
+.subpages {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 4rem 10rem;
+    width: 80vw;
+    height: auto;
+    gap: 3rem;
+    overflow: hidden;
+
+    &__container {
+        display:flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid $color-grey-dark;
+    }
+
+    @include respond(big-desktop) {
+        padding: 10rem 20rem;
+    }
+
+    @include respond(tab-land) {
+        padding: 10rem 6rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 3rem;
+        width: 100vw;
+    }
+
+    &--h1 {
+        // margin-bottom: -3rem;
+        text-align: left;
+    }
+
+    &--h3 {
+        // margin-bottom: -2rem;
+        text-align: left;
+        font-weight: 800;
+        color: $color-turquoise;
+    }
+
+    &--h4 {
+        // margin-bottom: -2rem;
+        text-align: left;
+        color: $color-blue;
+    }
+    &--h5 {
+        // margin-bottom: -2rem;
+        text-align: left;
+        font-weight: 800;
+        color: $color-blue;
+    }
+
+    &--p {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+        color: $color-sand-light;
+        
+    }
+
+    
+
+    &__list-item {
+        font-family: "Nunito", sans-serif;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin-left: 2rem;
+        // margin-bottom: 2rem;
+        
+        &--bullet {
+            list-style: circle;
+        }
+
+        &--number {
+            list-style: decimal;
+            text-align: left;
+            font-weight: 800;
+            color: $color-blue;
+        }
+
+        &--none {
+            list-style: none;
+        }
+        
+    }
+
+
+}
 

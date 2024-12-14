@@ -286,26 +286,3 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-
-//Cookies
-   // DOMContentLoaded 이벤트로 DOM이 로드된 후 실행
-   document.addEventListener("DOMContentLoaded", () => {
-    const cookiePopup = document.getElementById("cookie-popup");
-    const acceptButton = document.getElementById("accept-cookies");
-
-    // Check if the user has already accepted cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-        // Show the cookie popup
-        cookiePopup.classList.remove("hidden");
-    }
-
-    // Accept button click handler
-    acceptButton.addEventListener("click", () => {
-        // Save acceptance to localStorage
-        localStorage.setItem("cookiesAccepted", "true");
-
-        // Hide the cookie popup
-        cookiePopup.classList.add("hidden");
-    });
-});
