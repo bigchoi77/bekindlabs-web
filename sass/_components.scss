@@ -68,6 +68,34 @@
         //     width: 50%;
         // }
     }
+
+    &__lang {
+
+        
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: 300;
+            padding: 0 1rem;
+            color: $color-sand-light;
+            text-decoration: none;
+            text-transform: uppercase;    
+        }
+        
+        &:hover,
+        &:active {
+
+            color: $color-orange;
+        }  
+
+        &:link.active {
+            color: $color-turquoise !important;
+            font-weight: 800;
+        }
+        
+        
+    }
 }
 
 .footer {

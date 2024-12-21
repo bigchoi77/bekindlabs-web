@@ -194,7 +194,13 @@
 
     &__h2 {
         margin-bottom: 2rem;
+        text-align: center;
+        margin: 0 auto;
         // text-align: center;
+        
+        @include respond(tab-port) {
+            text-align: left;
+        }
     }
 
     &__h3 {
@@ -216,16 +222,27 @@
                 width: 100%;
             }
         }
+
     }
 
     &__h4 {
         color: $color-sand-light;
+
+        &--jp {
+            color: $color-sand-light;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
         // margin: 3rem 0 0 0;
     }
 
     &__p {
         color: $color-sand-light;
-        // margin: -1rem 0 0 0;
+        
+        &--jp {
+            color: $color-sand-light;
+            font-size: 1.3rem;
+        }
     }
 
     
