@@ -86,25 +86,25 @@ ScrollTrigger.create({
 });
 
 
-02. 여러개 이질감 표현하기
-gsap.utils.toArray(".animation-item").forEach(item => {
-    gsap.from(item, {
-        y: -100,
-        autoAlpha: 0,
-        ease: "none",
-        duration: 1,
-        pin: true,
-        anticipatePin: 1,
-        scrollTrigger: {
-            trigger: item,
-            start: "top 50%", 
-            end: "bottom 75%",
+// 02. 여러개 이질감 표현하기
+// gsap.utils.toArray(".animation-item").forEach(item => {
+//     gsap.from(item, {
+//         y: -100,
+//         autoAlpha: 0,
+//         ease: "none",
+//         duration: 1,
+//         pin: true,
+//         anticipatePin: 1,
+//         scrollTrigger: {
+//             trigger: item,
+//             start: "top 50%", 
+//             end: "bottom 75%",
             
-            markers: true,
-            scrub: 3
-        },  
-    });
-});
+//             markers: true,
+//             scrub: 3
+//         },  
+//     });
+// });
 
 
 // 헤더가 슬라이드 다운/업되며 나타나고 사라지는 애니메이션
