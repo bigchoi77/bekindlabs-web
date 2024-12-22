@@ -60,7 +60,6 @@
 }
 
 .header {
-    
     &__logo {
         width: auto;  
         // margin-right: auto;
@@ -68,43 +67,73 @@
         //     width: 50%;
         // }
     }
+}
 
-    &__lang {
-        margin-left: auto;
-        
+/* 드롭다운 버튼 스타일 */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
 
-        @include respond(tab-port) {
-            margin-right: 2rem;
-            padding: 0 .4rem;
-        }
-
-        &:link,
-        &:visited {
-            // justify-content: flex-end;
-            // display: inline-block;
-            font-size: 1.4rem;
-            font-weight: 300;
-            padding: 0 1rem;
-            color: $color-sand-light;
-            text-decoration: none;
-            text-transform: uppercase;    
-        }
-        
-        &:hover,
-        &:active {
-            color: $color-orange;
-            
-        }  
-
-        &:link.active {
-            color: $color-turquoise !important;
-            text-decoration: underline;
-            font-weight: 800;
-        }
-        
-        
+    @include respond(tab-port) {
+        margin-right: 4rem;
     }
 }
+  
+.dropdown-btn {
+    background-color: $color-black; /* 버튼 색상 */
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; /* 텍스트와 아이콘을 수평 정렬 */
+}
+  
+.dropdown-btn:hover {
+    background-color: $color-grey-dark; /* 마우스 오버 시 색상 */
+}
+  
+.arrow-down {
+    margin-left: 8px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid $color-sand-light;
+    content: '';
+}
+  
+/* 드롭다운 메뉴 스타일 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $color-sand-light;
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+  
+.dropdown-content a {
+    font-size: 1.2rem;
+    color: $color-black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+  
+.dropdown-content a:hover {
+    color: $color-blue; /* 링크 오버 시 색상 */
+}
+  
+/* 드롭다운 버튼이 클릭될 때 메뉴 표시 */
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .footer {
     display: flex;

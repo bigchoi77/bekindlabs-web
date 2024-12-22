@@ -8,6 +8,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome CDN 링크 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">     
+        
         <link rel="stylesheet" href="/css/main.css">
         <script src="/scripts/script.js" defer></script>
 
@@ -23,11 +27,16 @@
         <a href="#" class="js-scroll-top">
             <img src="/img/logo_KIND.svg" alt="Bekind Labs Logo" class="header__logo">
         </a>
-        <div class="header__lang">
-            <a href="/" class="header__lang active" aria-current="page">EN</a>
-            <a href="/jp/" class="header__lang">日本語</a>
-            <!-- <a href="/kr/" class="header__lang">KR</a> -->
+        <div class="language-dropdown">
+            <button class="dropdown-btn">English <span class="arrow-down"></span></button>
+            <div class="dropdown-content">
+              <a href="/">English</a>
+              <a href="/jp">日本語</a>
+              <a href="/kr">한국어</a>
+            </div>
         </div>
+          
+       
         <div class="navigation">
             
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -448,11 +457,11 @@
                     </div>
                     <div class="text-wrap">
                         <h4 class="blue"> Bekind Labs LLC </h4>
-                    <p class="section__p"> DOT Bldg<br>
+                        <p class="section__p"> DOT Bldg<br>
                         1-7-20, Hiroo, Shibuya-ku, <br>
                         Tokyo 150-0012 
                         Japan
-                    </p>
+                        </p>
                     </div>
                 
                 </div>
