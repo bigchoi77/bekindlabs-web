@@ -55,7 +55,8 @@ ScrollTrigger.create({
 const ani5 = gsap.timeline();
 ani5.from("#section5 .e1", {y: -100, autoAlpha:0})
     .from("#section5 .e2", {y: -100, autoAlpha:0})
-    .from("#section5 .e3", {y: 100, autoAlpha:0});
+    .from("#section5 .e3", {y: 100, autoAlpha:0})
+    .from("#section5 .e4", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani5,
