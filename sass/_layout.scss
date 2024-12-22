@@ -135,7 +135,7 @@
     }
 
     &--offer {
-        height: 100vh;
+        height: auto;
         background-color: $color-black;
 
         @include respond(tab-port) {
@@ -144,7 +144,7 @@
     }
 
     &--methodology {
-        height: 100vh;
+        height: auto;
         background-color: $color-grey-dark;
 
         @include respond(tab-port) {
@@ -158,7 +158,7 @@
     }
 
     &--contact {
-        height: 100vh;
+        height: auto;
         background-color: $color-grey-dark;
         
         @include respond(tab-port) {

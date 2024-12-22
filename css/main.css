@@ -594,7 +594,7 @@ p {
   }
 }
 .section--offer {
-  height: 100vh;
+  height: auto;
   background-color: #131E28;
 }
 @media only screen and (max-width: 900px) {
@@ -603,7 +603,7 @@ p {
   }
 }
 .section--methodology {
-  height: 100vh;
+  height: auto;
   background-color: #344859;
 }
 @media only screen and (max-width: 900px) {
@@ -616,7 +616,7 @@ p {
   background-color: #131E28;
 }
 .section--contact {
-  height: 100vh;
+  height: auto;
   background-color: #344859;
 }
 @media only screen and (max-width: 900px) {
