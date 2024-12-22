@@ -254,7 +254,6 @@ p {
   visibility: hidden;
   transition: opacity 0.5s ease-in-out;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 10rem;
   z-index: 1000;
@@ -283,7 +282,6 @@ p {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 10rem;
   z-index: 1000;
@@ -307,8 +305,16 @@ p {
 .header__logo {
   width: auto;
 }
+.header__lang {
+  margin-left: auto;
+}
+@media only screen and (max-width: 900px) {
+  .header__lang {
+    margin-right: 2rem;
+    padding: 0 0.4rem;
+  }
+}
 .header__lang:link, .header__lang:visited {
-  display: inline-block;
   font-size: 1.4rem;
   font-weight: 300;
   padding: 0 1rem;
@@ -321,6 +327,7 @@ p {
 }
 .header__lang:link.active {
   color: #22F5CB !important;
+  text-decoration: underline;
   font-weight: 800;
 }
 

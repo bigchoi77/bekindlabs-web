@@ -4,10 +4,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const ani2 = gsap.timeline();
 ani2.from("#section2 .b1", {y: -100, autoAlpha:0})
     .from("#section2 .b2", {y: -100, autoAlpha:0})
-    .from("#section2 .b3", {x: -100, autoAlpha:0})
-    .from("#section2 .b4", {x: -100, autoAlpha:0})
-    .from("#section2 .b5", {x: -100, autoAlpha:0})
-    .from("#section2 .b6", {x: -100, autoAlpha:0});
+    .from("#section2 .b3", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani2,
@@ -24,9 +21,7 @@ ScrollTrigger.create({
 const ani3 = gsap.timeline();
 ani3.from("#section3 .c1", {y: -100, autoAlpha:0})
     .from("#section3 .c2", {y: -100, autoAlpha:0})
-    .from("#section3 .c3", {x: -100, autoAlpha:0})
-    .from("#section3 .c4", {x: -100, autoAlpha:0})
-    .from("#section3 .c5", {x: -100, autoAlpha:0});
+    .from("#section3 .c3", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani3,
@@ -43,10 +38,7 @@ ScrollTrigger.create({
 const ani4 = gsap.timeline();
 ani4.from("#section4 .d1", {y: -100, autoAlpha:0})
     .from("#section4 .d2", {y: -100, autoAlpha:0})
-    .from("#section4 .d3", {x: -100, autoAlpha:0})
-    .from("#section4 .d4", {x: -100, autoAlpha:0})
-    .from("#section4 .d5", {x: -100, autoAlpha:0})
-    .from("#section4 .d6", {x: -100, autoAlpha:0});
+    .from("#section4 .d3", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani4,
@@ -63,9 +55,7 @@ ScrollTrigger.create({
 const ani5 = gsap.timeline();
 ani5.from("#section5 .e1", {y: -100, autoAlpha:0})
     .from("#section5 .e2", {y: -100, autoAlpha:0})
-    .from("#section5 .e3", {x: -100, autoAlpha:0})
-    .from("#section5 .e4", {x: -100, autoAlpha:0})
-    .from("#section5 .e5", {x: -100, autoAlpha:0});
+    .from("#section5 .e3", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani5,
@@ -82,9 +72,7 @@ ScrollTrigger.create({
 const ani6 = gsap.timeline();
 ani6.from("#section6 .f1", {y: -100, autoAlpha:0})
     .from("#section6 .f2", {y: -100, autoAlpha:0})
-    .from("#section6 .f3", {x: -100, autoAlpha:0})
-    .from("#section6 .f4", {x: -100, autoAlpha:0})
-    .from("#section6 .f5", {x: -100, autoAlpha:0});
+    .from("#section6 .f3", {y: 100, autoAlpha:0});
 
 ScrollTrigger.create({
     animation: ani6,

@@ -11,7 +11,7 @@
       transition: opacity 0.5s ease-in-out;
     
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
     padding:0 10rem;
     
@@ -40,7 +40,7 @@
       left: 0;
     
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     padding:0 10rem;
     
@@ -63,16 +63,25 @@
     
     &__logo {
         width: auto;  
-
+        // margin-right: auto;
         // @include respond(tab-port) {
         //     width: 50%;
         // }
     }
 
     &__lang {
+        margin-left: auto;
+        
+
+        @include respond(tab-port) {
+            margin-right: 2rem;
+            padding: 0 .4rem;
+        }
+
         &:link,
         &:visited {
-            display: inline-block;
+            // justify-content: flex-end;
+            // display: inline-block;
             font-size: 1.4rem;
             font-weight: 300;
             padding: 0 1rem;
@@ -83,12 +92,13 @@
         
         &:hover,
         &:active {
-
             color: $color-orange;
+            
         }  
 
         &:link.active {
             color: $color-turquoise !important;
+            text-decoration: underline;
             font-weight: 800;
         }
         
