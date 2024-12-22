@@ -1,110 +1,110 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-// // SECTION2 순차적으로 나오기
-// const ani2 = gsap.timeline();
-// ani2.from("#section2 .b1", {y: -100, autoAlpha:0})
-//     .from("#section2 .b2", {y: -100, autoAlpha:0})
-//     .from("#section2 .b3", {y: 100, autoAlpha:0});
+// SECTION2 순차적으로 나오기
+const ani2 = gsap.timeline();
+ani2.from("#section2 .b1", {y: -100, autoAlpha:0})
+    .from("#section2 .b2", {y: -100, autoAlpha:0})
+    .from("#section2 .b3", {y: 100, autoAlpha:0});
 
-// ScrollTrigger.create({
-//     animation: ani2,
-//     trigger: "#section2",
-//     start: "top top",
-//     end: "+=1000",
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     markers: false
-// });
+ScrollTrigger.create({
+    animation: ani2,
+    trigger: "#section2",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
 
-// // SECTION3 순차적으로 나오기
-// const ani3 = gsap.timeline();
-// ani3.from("#section3 .c1", {y: -100, autoAlpha:0})
-//     .from("#section3 .c2", {y: -100, autoAlpha:0})
-//     .from("#section3 .c3", {y: 100, autoAlpha:0});
+// SECTION3 순차적으로 나오기
+const ani3 = gsap.timeline();
+ani3.from("#section3 .c1", {y: -100, autoAlpha:0})
+    .from("#section3 .c2", {y: -100, autoAlpha:0})
+    .from("#section3 .c3", {y: 100, autoAlpha:0});
 
-// ScrollTrigger.create({
-//     animation: ani3,
-//     trigger: "#section3",
-//     start: "top top",
-//     end: "+=1000",
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     markers: false
-// });
+ScrollTrigger.create({
+    animation: ani3,
+    trigger: "#section3",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
 
-// // SECTION4 순차적으로 나오기
-// const ani4 = gsap.timeline();
-// ani4.from("#section4 .d1", {y: -100, autoAlpha:0})
-//     .from("#section4 .d2", {y: -100, autoAlpha:0})
-//     .from("#section4 .d3", {y: 100, autoAlpha:0});
+// SECTION4 순차적으로 나오기
+const ani4 = gsap.timeline();
+ani4.from("#section4 .d1", {y: -100, autoAlpha:0})
+    .from("#section4 .d2", {y: -100, autoAlpha:0})
+    .from("#section4 .d3", {y: 100, autoAlpha:0});
 
-// ScrollTrigger.create({
-//     animation: ani4,
-//     trigger: "#section4",
-//     start: "top top",
-//     end: "+=1000",
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     markers: false
-// });
+ScrollTrigger.create({
+    animation: ani4,
+    trigger: "#section4",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
 
-// // SECTION5 순차적으로 나오기
-// const ani5 = gsap.timeline();
-// ani5.from("#section5 .e1", {y: -100, autoAlpha:0})
-//     .from("#section5 .e2", {y: -100, autoAlpha:0})
-//     .from("#section5 .e3", {y: 100, autoAlpha:0});
+// SECTION5 순차적으로 나오기
+const ani5 = gsap.timeline();
+ani5.from("#section5 .e1", {y: -100, autoAlpha:0})
+    .from("#section5 .e2", {y: -100, autoAlpha:0})
+    .from("#section5 .e3", {y: 100, autoAlpha:0});
 
-// ScrollTrigger.create({
-//     animation: ani5,
-//     trigger: "#section5",
-//     start: "top top",
-//     end: "+=1000",
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     markers: false
-// });
+ScrollTrigger.create({
+    animation: ani5,
+    trigger: "#section5",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
 
-// // SECTION6 순차적으로 나오기
-// const ani6 = gsap.timeline();
-// ani6.from("#section6 .f1", {y: -100, autoAlpha:0})
-//     .from("#section6 .f2", {y: -100, autoAlpha:0})
-//     .from("#section6 .f3", {y: 100, autoAlpha:0});
+// SECTION6 순차적으로 나오기
+const ani6 = gsap.timeline();
+ani6.from("#section6 .f1", {y: -100, autoAlpha:0})
+    .from("#section6 .f2", {y: -100, autoAlpha:0})
+    .from("#section6 .f3", {y: 100, autoAlpha:0});
 
-// ScrollTrigger.create({
-//     animation: ani6,
-//     trigger: "#section6",
-//     start: "top top",
-//     end: "+=1000",
-//     scrub: true,
-//     pin: true,
-//     anticipatePin: 1,
-//     markers: false
-// });
+ScrollTrigger.create({
+    animation: ani6,
+    trigger: "#section6",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+    anticipatePin: 1,
+    markers: false
+});
 
 
-// 02. 여러개 이질감 표현하기
-// gsap.utils.toArray(".animation-item").forEach(item => {
-//     gsap.from(item, {
-//         y: -100,
-//         autoAlpha: 0,
-//         ease: "none",
-//         duration: 1,
-//         pin: true,
-//         anticipatePin: 1,
-//         scrollTrigger: {
-//             trigger: item,
-//             start: "top 50%", 
-//             end: "bottom 75%",
+02. 여러개 이질감 표현하기
+gsap.utils.toArray(".animation-item").forEach(item => {
+    gsap.from(item, {
+        y: -100,
+        autoAlpha: 0,
+        ease: "none",
+        duration: 1,
+        pin: true,
+        anticipatePin: 1,
+        scrollTrigger: {
+            trigger: item,
+            start: "top 50%", 
+            end: "bottom 75%",
             
-//             markers: true,
-//             scrub: 3
-//         },  
-//     });
-// });
+            markers: true,
+            scrub: 3
+        },  
+    });
+});
 
 
 // 헤더가 슬라이드 다운/업되며 나타나고 사라지는 애니메이션
