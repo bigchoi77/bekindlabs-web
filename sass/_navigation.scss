@@ -18,7 +18,12 @@
         text-align: center;
         cursor: pointer;
 
-        @include respond(tab-port) {
+        @include respond(big-desktop) {
+            top: 1.5rem;
+            right: 20rem;
+        }
+
+        @include respond(tab-land) {
             top: 1.5rem;
             right: 1.5rem;
         }
@@ -42,7 +47,12 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
-        @include respond(tab-port) {
+        @include respond(big-desktop) {
+            top: 1.75rem;
+            right: 20.5rem;
+        }
+
+        @include respond(tab-land) {
             top: 1.75rem;
             right: 1.75rem;
         }

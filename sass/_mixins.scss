@@ -42,6 +42,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == tab-land {
         @media only screen and (max-width: 1200px) { @content };    //1200px
     }
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 1400px) { @content };    //1400px
+    }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 1800px) { @content };    //1800
     }

@@ -117,6 +117,18 @@ h4 {
   font-weight: 800;
   line-height: 2.5rem;
 }
+@media only screen and (max-width: 1400px) {
+  h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
 
 h5 {
   font-size: 1.8rem;
@@ -255,12 +267,12 @@ p {
   transition: opacity 0.5s ease-in-out;
   display: flex;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 12rem;
   z-index: 1000;
 }
 @media only screen and (min-width: 1800px) {
   #header {
-    padding: 0 20rem;
+    padding: 0 24rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -311,11 +323,7 @@ p {
   position: relative;
   display: inline-block;
   margin-left: auto;
-}
-@media only screen and (max-width: 900px) {
-  .language-dropdown {
-    margin-right: 4rem;
-  }
+  margin-right: 4rem;
 }
 
 .dropdown-btn {
@@ -603,6 +611,16 @@ p {
   display: flex;
   gap: 6rem;
 }
+@media only screen and (max-width: 1400px) {
+  .section__container {
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .section__container {
+    gap: 3rem;
+  }
+}
 @media only screen and (max-width: 900px) {
   .section__container {
     display: flex;
@@ -683,6 +701,7 @@ p {
 @media only screen and (max-width: 900px) {
   .section__h1 {
     text-align: left;
+    margin: 0;
   }
 }
 .section__h2 {
@@ -697,19 +716,19 @@ p {
 }
 .section__h3 {
   color: #22F5CB;
-  width: 60%;
+  max-width: 60%;
 }
 .section__h3--white {
   color: #F0EDE5;
   margin: 0 auto;
   margin-bottom: 8rem;
-  width: 60%;
-  align-items: center;
+  max-width: 60%;
+  text-align: center;
 }
 @media only screen and (max-width: 900px) {
   .section__h3--white {
     text-align: left;
-    width: 100%;
+    max-width: 100%;
   }
 }
 .section__h4 {
@@ -1108,7 +1127,13 @@ p {
   text-align: center;
   cursor: pointer;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1800px) {
+  .navigation__button {
+    top: 1.5rem;
+    right: 20rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
   .navigation__button {
     top: 1.5rem;
     right: 1.5rem;
@@ -1131,7 +1156,13 @@ p {
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1800px) {
+  .navigation__background {
+    top: 1.75rem;
+    right: 20.5rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
   .navigation__background {
     top: 1.75rem;
     right: 1.75rem;

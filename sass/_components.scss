@@ -13,12 +13,12 @@
     display: flex;
     
     align-items: center;
-    padding:0 10rem;
+    padding:0 12rem;
     
     z-index: 1000;
 
     @include respond(big-desktop) {
-        padding: 0 20rem;
+        padding: 0 24rem;
     }
 
     @include respond(tab-land) {
@@ -75,9 +75,7 @@
     display: inline-block;
     margin-left: auto;
 
-    @include respond(tab-port) {
-        margin-right: 4rem;
-    }
+    margin-right: 4rem;
 }
   
 .dropdown-btn {
